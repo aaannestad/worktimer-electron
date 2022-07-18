@@ -1,21 +1,20 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { Button } from "antd";
+import Project from "./Project";
+const ipcRenderer = require("electron");
+
+const testProjects = ["test1", "testagain"];
+
+// ipcRenderer.send("read-file");
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Button>test button</Button>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {testProjects.map((project) => (
+          <Project name={project}></Project>
+        ))}
       </header>
     </div>
   );

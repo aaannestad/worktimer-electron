@@ -1,4 +1,5 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, ipcMain } = require("electron");
+// const fs = require("fs");
 
 function createWindow() {
   // Create the browser window.
@@ -43,3 +44,18 @@ app.on("activate", () => {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
+
+// function fsRead() {
+//   fs.readFile("test.json", (err, data) => {
+//     if (err) throw err;
+//     parsedData = JSON.parse(data);
+//     console.log(parsedData.projects);
+//     for (const item in parsedData.projects) {
+//       console.log(item);
+//     }
+//   });
+// }
+
+// ipcMain.on("read-file", () => {
+//   fsRead();
+// });
