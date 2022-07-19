@@ -1,21 +1,13 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { Button } from "antd";
+import Project from "./project.js";
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Button>test button</Button>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Project name="test"></Project>
       </header>
     </div>
   );
