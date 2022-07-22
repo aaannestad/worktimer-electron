@@ -41,8 +41,6 @@ export default function MainWindow() {
   for (var item in projectList) {
     // This is the only way to create a list of Project components from an object
     projectElements.push(<Project name={projectList[item].name}></Project>);
-    console.log(projectList[item].name);
-    console.log(projectList);
   }
 
   return (
