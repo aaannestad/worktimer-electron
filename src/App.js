@@ -1,7 +1,9 @@
 import logo from "./logo.svg";
 import "./App.css";
 import { Button } from "antd";
-import Project from "./project.js";
+import Project from "./Project.js";
+import NewProjectButton from "./NewProjectButton";
+import dayjs from "dayjs";
 
 const testData = {
   item1: {
@@ -17,7 +19,12 @@ const testData = {
 var projectElements = [];
 
 for (var item in testData) {
+  // This is the only way to create a list of Project components from an object
   projectElements.push(<Project name={testData[item].name}></Project>);
+}
+
+function handleNewProject() {
+  console.log("New project button");
 }
 
 function App() {
@@ -25,6 +32,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <>{projectElements}</>
+        <NewProjectButton onClick={() => handleNewProject()}></NewProjectButton>
       </header>
     </div>
   );
